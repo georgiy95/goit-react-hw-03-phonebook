@@ -1,22 +1,29 @@
+.list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .list-item {
   font-size: 18px;
 }
-
 .contact-item {
   display: flex;
   gap: 8px;
 }
-
 .del-btn {
   cursor: pointer;
   font-size: 14px;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-left: 10px;
   padding-right: 10px;
   border: 1px solid rgba(5, 5, 5, 0.2);
   transition: background-color var(--trans-hv);
+  background: white;
+  color: red;
+  text-transform: capitalize;
 }
 
 .del-btn:hover {
   background-color: red;
+  color: white;
 }

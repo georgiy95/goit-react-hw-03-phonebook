@@ -1,5 +1,6 @@
-import css  from './ContactForm.module.css'
+import css  from '../ContactForm/ContactForm.module.css'
 import PropTypes from "prop-types";
+
 
 export const Filter = ({filter, handleChange}) => {
     return (

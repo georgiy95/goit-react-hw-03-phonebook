@@ -1,0 +1,22 @@
+.list-item {
+  font-size: 18px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 8px;
+}
+
+.del-btn {
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  transition: background-color var(--trans-hv);
+}
+
+.del-btn:hover {
+  background-color: red;
+}

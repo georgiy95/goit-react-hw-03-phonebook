@@ -12,7 +12,7 @@ class ContactForm extends Component{
     }
     handleSubmit = e => {
         e.preventDefault()
-        if(!this.props.onSubmit({ ...this.state })) return
+        if (!this.props.onSubmit({ ...this.state })) return
         this.reset()
     }
     reset() {

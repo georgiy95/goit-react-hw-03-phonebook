@@ -22,7 +22,6 @@
   color: red;
   text-transform: capitalize;
 }
-
 .del-btn:hover {
   background-color: red;
   color: white;

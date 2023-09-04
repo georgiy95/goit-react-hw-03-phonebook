@@ -1,13 +1,10 @@
-import PropTypes from 'prop-types'; // типізація
-import css from './ContactList.module.css'; // стилізація
+import PropTypes from 'prop-types'; 
+import css from './ContactList.module.css'; 
 
-// Компонент зі списком контактів.
-// contacts - масив, delContact - функція
 export const ContactList = ({ contacts, delContact }) => {
   return (
     <ul className={css.list}>
 
-      {/* Проходження по кожному контакту та повернення нового масиву з елементами списку */}
       {contacts.map(contact => {
         return (
           <li className={css.item} key={contact.id}>
@@ -16,8 +13,6 @@ export const ContactList = ({ contacts, delContact }) => {
             <button
               className={css.button}
               type="button"
-
-              // Виклик функції для видалення контакту
               onClick={() => {
                 delContact(contact.id);
               }}
@@ -31,11 +26,7 @@ export const ContactList = ({ contacts, delContact }) => {
   );
 };
 
-// Типізація
 ContactList.propTypes = {
-  delContact: PropTypes.func.isRequired, // функція
-  contacts:PropTypes.array.isRequired // масив
+  delContact: PropTypes.func.isRequired, 
+  contacts:PropTypes.array.isRequired 
 };
-
-// Діма Берестень
-

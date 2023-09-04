@@ -1,3 +1,15 @@
 .input {
-    margin-top: 10px;
+  margin-top: 10px;
+  border-color: #0004ff;
+  border-radius: 5px;
+  display: block;
+  font-size: 18px;
+  margin-top: 10px;
+  text-transform: capitalize;
+  width: 300px;
+}
+
+.filterLabel {
+  color: #0004ff;
+  font-size: 24px;
 }

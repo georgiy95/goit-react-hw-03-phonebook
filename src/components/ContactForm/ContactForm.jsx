@@ -1,23 +1,20 @@
-import { Component } from 'react'; // пакет для створення класових компонентів
-import css from './ContactForm.module.css'; // стилізація
-import PropTypes from 'prop-types'; // типізація
+import { Component } from 'react'; 
+import css from './ContactForm.module.css'; 
+import PropTypes from 'prop-types'; 
 
-// компонент форми для додавання нового контакту
 export class ContactForm extends Component {
   state = {
     name: '',
     number: '',
   };
 
-  // метод для очищення полів форми
   resetForm = () => {
     this.setState({ name: '', number: '' });
   };
 
-  // метод для зміни значення полей вводу
   onChangeInput = evt => {
-    const { name, value } = evt.currentTarget; // розпаковка значення name та value з об'єкту події
-    this.setState({ [name]: value }); // встановлення значення в стейт
+    const { name, value } = evt.currentTarget; 
+    this.setState({ [name]: value }); 
   };
 
   render() {
@@ -25,11 +22,9 @@ export class ContactForm extends Component {
       <>
         <form
           className={css.formstyle}
-
-          // метод для збереження даних форми в стейт
           onSubmit={evt => {
-            evt.preventDefault(); // відміна перезавантаження сторінки
-            this.props.addContact(this.state); // додавання нового контакту в стейт
+            evt.preventDefault();
+            this.props.addContact(this.state); 
             this.resetForm();
           }}
         >
@@ -38,12 +33,12 @@ export class ContactForm extends Component {
             <br />
             <input
               className={css.input}
-              onChange={this.onChangeInput} // метод для зміни значення полів вводу
-              value={this.state.name} // встановлення поточного значення поля введення, яке зберігається в стані компоненту
+              onChange={this.onChangeInput} 
+              value={this.state.name}
               type="text"
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+              title="Name may contain only letters, apostrophe, dash and spaces. For example Armin"
               required
             />
           </label>
@@ -53,8 +48,8 @@ export class ContactForm extends Component {
             <br />
             <input
               className={css.input}
-              onChange={this.onChangeInput} // метод для зміни значення полів вводу
-              value={this.state.number} // встановлення поточного значення поля введення, яке зберігається в стані компоненту
+              onChange={this.onChangeInput} 
+              value={this.state.number}
               type="tel"
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -72,9 +67,6 @@ export class ContactForm extends Component {
   }
 }
 
-// типізація пропсів
 ContactForm.propTypes = {
-  addContact: PropTypes.func.isRequired, // функція
+  addContact: PropTypes.func.isRequired, 
 };
-
-// Діма Берестень

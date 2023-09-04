@@ -1,23 +1,31 @@
-import css  from '../ContactForm/ContactForm.module.css'
-import PropTypes from "prop-types";
+import css from './Filter.module.css'; // стилізація
+import PropTypes from 'prop-types'; // типізація
 
+// Компонент фільтру для пошуку контактів за ім'ям.
+// filter - містить введений текст фільтру.
+// onChangeInput - функція, яка викликається при зміні значення фільтру.
+export const Filter = ({ filter, onChangeInput }) => {
+  return (
+    <>
+      <label>
+        Find contacts by name
+        <br />
+        <input className={css.input}
+          onChange={onChangeInput} // виклик функції onChangeInput при зміні значення фільтру
+          value={filter} // встановлення значення фільтру
+          type="text"
+          name="filter"
+        />
+      </label>
+      <br />
+    </>
+  );
+};
 
-export const Filter = ({filter, handleChange}) => {
-    return (
-        <label className={css["contact-label"]}>
-              Find contact by name    
-              <input
-                type="text"
-                name="filter"
-                value={filter}
-                onChange={handleChange}
-                className={css["contact-input"]}
-              />
-            </label>
-    )
-}
-
+// Типізація
 Filter.propTypes = {
-    filter: PropTypes.string.isRequired,
-    handleChange: PropTypes.func.isRequired
-}
+  filter: PropTypes.string.isRequired, // рядок
+  onChangeInput:PropTypes.func.isRequired // функція
+};
+
+// Діма Берестень

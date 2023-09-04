@@ -1,10 +1,5 @@
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-.title {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: rgb(0, 4, 255);
-  font-size: 36px;
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
 }

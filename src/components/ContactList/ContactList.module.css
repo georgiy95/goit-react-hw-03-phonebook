@@ -1,29 +1,27 @@
 .list {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.list-item {
-  font-size: 18px;
-}
-.contact-item {
-  display: flex;
-  gap: 8px;
-}
-.del-btn {
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid rgba(5, 5, 5, 0.2);
-  transition: background-color var(--trans-hv);
-  background: white;
-  color: red;
-  text-transform: capitalize;
+  padding: 0;
 }
 
-.del-btn:hover {
-  background-color: red;
-  color: white;
+.item {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.number {
+  font-weight: 600;
+}
+
+.button {
+  justify-content: flex-end;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 1px 10px;
+}
+
+.button:hover {
+  background: rgb(240, 240, 240);
 }
